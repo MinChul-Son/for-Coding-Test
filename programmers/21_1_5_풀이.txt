@@ -38,3 +38,17 @@ def solution(priorities, location):
             if cur[0] == location:
                 return answer
 내가 zip을 써서 만든 temp_list를 한면에 queue 안에서 해결했음.
+
+
+
+프로그래머스 heap level2 - 더 맵게
+---------------------------------------------------------------------
+논리:
+오름차순으로 정렬 후 
+list 요소 중 k보다 작은 값 뽑아내서 low_sco에 append
+k보다 작은 값을 다 섞었는데도 k보다 작으면 -1 리턴
+따로 분리하면 오히려 더 복잡해짐.
+최소히프에서의 삽입 삭제를 생각해봐야할듯
+insert함수 사용
+heapq 라이브러리 import하니까 너무 쉽게 다 해결된다..ㄷㄷ
+까먹고 있던 조건 다 섞었는데도 k보다 작으면 -1리턴
