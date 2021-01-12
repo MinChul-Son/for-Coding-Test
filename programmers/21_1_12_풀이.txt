@@ -1,0 +1,3 @@
+isspace() ==> 공백확인
+isupper() ==> 대문자확인
+islower() ==> 소문자확인

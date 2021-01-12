@@ -85,8 +85,42 @@
 
 #https://programmers.co.kr/learn/courses/30/lessons/12917?language=python3
 
-def solution(s):
-    ls = list(s)
-    ls.sort(reverse = True)
-    return "".join(ls)
+# def solution(s):
+#     ls = list(s)
+#     ls.sort(reverse = True)
+#     return "".join(ls)
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/12918?language=python3
+
+# def solution(s):
+#     if len(s)== 4 or len(s)==6:
+#         if s.isdecimal() == True:
+#             return True
+#         else:
+#             return False
+#     else:
+#         return False
+
+
+#https://programmers.co.kr/learn/courses/30/lessons/12919
+
+# def solution(seoul):
+#     answer = "김서방은 "+str(seoul.index('Kim'))+"에 있다"
+#     return answer
+
+
+#https://programmers.co.kr/learn/courses/30/lessons/12922
+
+# def solution(n):
+#     if n%2 ==0:
+#         return "수박"*(n//2)
+#     else:
+#         return "수박"*(n//2) + "수"
+
+# https://programmers.co.kr/learn/courses/30/lessons/12925?language=python3
+
+
+
+
 
