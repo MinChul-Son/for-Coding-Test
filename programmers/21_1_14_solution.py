@@ -58,27 +58,59 @@
 #     answer_list[i] += temp
 # print(sum(answer_list))
 
-import re
+# import re
 
 
-def solution(dartResult):
-    bonus = {'S' : 1, 'D' : 2, 'T' : 3}
-    option = {'' : 1, '*' : 2, '#' : -1}
+# def solution(dartResult):
+#     bonus = {'S' : 1, 'D' : 2, 'T' : 3}
+#     option = {'' : 1, '*' : 2, '#' : -1}
 
-    p = re.compile('(\d+)([SDT])([*#]?)')
-    dart = p.findall(dartResult)            
+#     p = re.compile('(\d+)([SDT])([*#]?)')
+#     dart = p.findall(dartResult)            
 
-    for i in range(len(dart)):                # 정규표현식으로 갈무리된 문자열들
-        if dart[i][2] == '*' and i > 0:
-            dart[i-1] *= 2
-        dart[i] = int(dart[i][0]) ** bonus[dart[i][1]] * option[dart[i][2]]
+#     for i in range(len(dart)):                # 정규표현식으로 갈무리된 문자열들
+#         if dart[i][2] == '*' and i > 0:
+#             dart[i-1] *= 2
+#         dart[i] = int(dart[i][0]) ** bonus[dart[i][1]] * option[dart[i][2]]
 
-    answer = sum(dart)
-    return answer
-        
-
+#     answer = sum(dart)
+#     return answer
 
 
-        
 
-        
+# https://programmers.co.kr/learn/courses/30/lessons/67256?language=python3
+
+
+s =[1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5]
+hand = 'right'
+now_location = [10,12]
+answer = ''
+while s:
+    push_num = s.pop(0)
+    if push_num == 1 or push_num == 4 or push_num == 7:
+        answer += 'L'
+        now_location[0] = push_num
+    elif push_num == 3 or push_num == 6 or push_num == 9:
+        answer += 'R'
+        now_location[1] = push_num
+    else:
+        push_num = 11 if push_num == 0 else push_num
+        print(push_num)
+            
+        absL = abs(push_num-now_location[0])
+        absR = abs(push_num-now_location[1])
+            
+        if sum(divmod(absL, 3)) > sum(divmod(absR, 3)):
+            answer+='R'
+            now_location[1] = push_num
+        elif sum(divmod(absL, 3)) < sum(divmod(absR, 3)):
+            answer +='L'
+            now_location[0] = push_num
+        else:
+            if hand == 'left':
+                answer+='L'
+                now_location[0] = push_num
+            else:
+                answer+='R'
+                now_location[1] = push_num
+print(answer)
