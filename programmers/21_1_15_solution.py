@@ -121,3 +121,29 @@
 #     if k != 0:
 #         stack = stack[:-k]
 #     return ''.join(stack)
+
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/12911?language=python3
+
+# def solution(n):
+#     start_num = n
+#     count_one = list(str(format(n,'b'))).count('1')
+#     answer = 0
+#     while True:
+#         start_num += 1
+#         count_new = list(str(format(start_num,'b'))).count('1')
+#         if count_one == count_new:
+#             return start_num
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/12941?language=python3
+# def solution(A,B):
+#     A.sort()
+#     B.sort(reverse=True)
+#     answer = 0
+#     for i in range(len(A)):
+#         answer += A[i] * B[i]
+
+
+#     return answer
