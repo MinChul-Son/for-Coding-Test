@@ -1,0 +1,14 @@
+이중 for문이 있을 때 
+내부 for문 조건을 통하여 외부 for문을 break 시키고 싶을때:
+
+for i ~~:
+    for j ~~:
+        if 조건:
+	break
+    else:
+        continue 
+    break
+
+==> for -else문을 사용 맨밑 break는 외부 for문을 빠져나가는
+       break인데 if조건에 걸렸을 때 break를 통해 빠져나와야만
+       실행가능함. 파이썬만의 for-else구문을 사용한 일종의 트릭.
