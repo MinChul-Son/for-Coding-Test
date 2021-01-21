@@ -55,3 +55,25 @@
 #     else:
 #         return [0,0]
 #     return [fail_person,cycle]
+
+
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/12905?language=python3
+
+# mylist = [ [1,2,3], [4,5,6], [7,8,9] ]
+# new_list = list(map(list, zip(*mylist)))
+# print(new_list)
+# import itertools
+
+# def solution(board):
+#     M, N = len(board), len(board[0])
+#     for i in range(1, M):
+#         for j in range(1, N):
+#             if board[i][j] == 1:
+#                 board[i][j] = min(board[i-1][j-1], board[i-1][j], board[i][j-1]) + 1
+#                 print(board)
+
+#     return max(itertools.chain(*board))**2
+
+# solution([[0,1,1,1],[1,1,1,1],[1,1,1,1],[0,0,1,0]])
