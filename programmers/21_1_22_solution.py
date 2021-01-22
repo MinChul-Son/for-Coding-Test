@@ -37,3 +37,22 @@
 #         answer += left if left < right else right
 #         idx += -left if left < right else right
 #     return answer
+
+# https://programmers.co.kr/learn/courses/30/lessons/12977?language=python3
+
+
+from itertools import combinations
+def solution(nums):
+    answer = 0
+    combi = list(combinations(nums,3))
+    for i in combi:
+        temp = sum(i)
+        count = 0
+        for j in range(1,temp):
+            if temp % j ==0:
+                count += 1
+        if count == 1:
+            answer += 1
+    return answer
+
+solution([1,2,7,6,4])
