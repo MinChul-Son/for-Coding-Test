@@ -41,18 +41,35 @@
 # https://programmers.co.kr/learn/courses/30/lessons/12977?language=python3
 
 
-from itertools import combinations
-def solution(nums):
+# from itertools import combinations
+# def solution(nums):
+#     answer = 0
+#     combi = list(combinations(nums,3))
+#     for i in combi:
+#         temp = sum(i)
+#         count = 0
+#         for j in range(1,temp):
+#             if temp % j ==0:
+#                 count += 1
+#         if count == 1:
+#             answer += 1
+#     return answer
+
+# solution([1,2,7,6,4])
+
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/12913?language=python3
+
+def solution(land):
     answer = 0
-    combi = list(combinations(nums,3))
-    for i in combi:
-        temp = sum(i)
-        count = 0
-        for j in range(1,temp):
-            if temp % j ==0:
-                count += 1
-        if count == 1:
-            answer += 1
+    dp = land
+    for i in range(1,len(land)):
+        dp[i][0] = max(dp[i-1][1],dp[i-1][2],dp[i-1][3]) + land[i][0]
+        dp[i][1] = max(dp[i-1][0],dp[i-1][2],dp[i-1][3]) + land[i][1]
+        dp[i][2] = max(dp[i-1][0],dp[i-1][1],dp[i-1][3]) + land[i][2]
+        dp[i][3] = max(dp[i-1][0],dp[i-1][1],dp[i-1][2]) + land[i][3]
+    print(dp)
     return answer
 
-solution([1,2,7,6,4])
+solution([[4, 3, 2, 1], [2, 2, 2, 1], [6, 6, 6, 4], [8, 7, 6, 5]])
