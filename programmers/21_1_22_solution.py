@@ -61,15 +61,32 @@
 
 # https://programmers.co.kr/learn/courses/30/lessons/12913?language=python3
 
-def solution(land):
-    answer = 0
-    dp = land
-    for i in range(1,len(land)):
-        dp[i][0] = max(dp[i-1][1],dp[i-1][2],dp[i-1][3]) + land[i][0]
-        dp[i][1] = max(dp[i-1][0],dp[i-1][2],dp[i-1][3]) + land[i][1]
-        dp[i][2] = max(dp[i-1][0],dp[i-1][1],dp[i-1][3]) + land[i][2]
-        dp[i][3] = max(dp[i-1][0],dp[i-1][1],dp[i-1][2]) + land[i][3]
-    print(dp)
-    return answer
+# def solution(land):
+#     answer = 0
+#     dp = land
+#     for i in range(1,len(land)):
+#         dp[i][0] = max(dp[i-1][1],dp[i-1][2],dp[i-1][3]) + land[i][0]
+#         dp[i][1] = max(dp[i-1][0],dp[i-1][2],dp[i-1][3]) + land[i][1]
+#         dp[i][2] = max(dp[i-1][0],dp[i-1][1],dp[i-1][3]) + land[i][2]
+#         dp[i][3] = max(dp[i-1][0],dp[i-1][1],dp[i-1][2]) + land[i][3]
+#     print(dp)
+#     return max(dp[len(dp)-1])
 
-solution([[4, 3, 2, 1], [2, 2, 2, 1], [6, 6, 6, 4], [8, 7, 6, 5]])
+# solution([[4, 3, 2, 1], [2, 2, 2, 1], [6, 6, 6, 4], [8, 7, 6, 5]])
+
+# https://programmers.co.kr/learn/courses/30/lessons/1845?language=python3
+
+
+# def solution(nums):
+#     answer = []
+#     temp_set = set(nums)
+#     if len(temp_set) >= len(nums)//2:
+#         return len(nums)//2
+#     else:
+#         return len(temp_set)
+
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/12980?language=python3
+# def solution(n):
+#     return bin(n)[2:].count('1')
