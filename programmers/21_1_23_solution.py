@@ -49,10 +49,9 @@
 #             b = b // 2
 #         else:
 #             b = b // 2 + 1
-        
-        
-
 #     return count
+
+
 
 # def solution(n,a,b):
 #     count = 0
@@ -62,3 +61,22 @@
 #         b = (b+1) // 2
 #     return count
 # print(solution(8,4,7))
+
+# def solution(n,a,b):
+#     count = 1 
+#     if a > b:
+#         a, b = b, a
+#     if a % 2 and abs(a-b) == 1:
+#         return count
+#     while True:
+#         count += 1
+#         if a % 2 ==0:
+#             a = a // 2
+#         else:
+#             a = a // 2 + 1
+#         if b % 2 ==0:
+#             b = b // 2
+#         else:
+#             b = b // 2 + 1
+#         if a % 2 and abs(a-b) == 1:
+#             return count
