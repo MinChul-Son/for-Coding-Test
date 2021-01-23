@@ -24,3 +24,28 @@
 #     return answer
 
 # solution(4,["1 fracta", "1 sina", "1 hana","1 robel", "1 abc", "1 sina", "1 lynn"])
+
+
+
+# def solution(m, v):
+#     answer = 0
+#     game_list = []
+#     for i in v:
+#         if not game_list:
+#             game_list.append(i)
+#         else:           
+#             for j,p in enumerate(game_list):
+#                 if m-p >= i:
+#                     game_list[j] += i
+#                     break
+#                 else:
+#                     continue
+#             else:
+#                 game_list.append(i)
+#     print(game_list)
+    
+#     return len(game_list)
+
+# print(solution(4,[3,2,3,1]))
+
+
