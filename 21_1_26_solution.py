@@ -51,3 +51,15 @@
 #     if next_row >= 1 and next_row <= 8 and next_column >= 1 and next_column <=8:
 #         result += 1
 # print(result)
+
+# s = input()
+# alpha_list = []
+# num_list = []
+# for i in s:
+#     if i.isalpha():
+#         alpha_list.append(i)
+#     else:
+#         num_list.append(i)
+# alpha_list.sort()
+# answer = "".join(alpha_list) + str(sum(map(int,num_list)))
+# print(answer)
