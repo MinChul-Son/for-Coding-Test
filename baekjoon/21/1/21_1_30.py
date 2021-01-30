@@ -50,4 +50,63 @@
 # print(answer)
 
 # https://www.acmicpc.net/problem/13305
+# import sys
+# n = int(input())
+# order = list(sys.stdin.readline().split() for _ in range(n))
+# stack = []
+# for i in order:
+#     if i[0] == 'push':
+#         stack.append(int(i[1]))
+#     elif i[0] == 'pop':
+#         if stack:
+#             print(stack.pop())
+#         else:
+#             print(-1)
+#     elif i[0] == 'size':
+#         print(len(stack))
+#     elif i[0] == 'empty':
+#         if stack:
+#             print(0)
+#         else:
+#             print(1)
+#     else:
+#         if stack:
+#             print(stack[-1])
+#         else:
+#             print(-1)
 
+
+# https://www.acmicpc.net/problem/10773
+# import sys
+# n = int(input())
+# N = list(sys.stdin.readline().strip() for _ in range(n))
+# stack = []
+# for i in N:
+#     if i == '0':
+#         stack.pop()
+#     else:
+#         stack.append(int(i))
+# print(sum(stack))
+
+# https://www.acmicpc.net/problem/9012
+# import sys
+# n = int(input())
+# N = list(sys.stdin.readline().strip() for _ in range(n))
+# for i in N:
+#     count = 0
+#     if i[0] == ')' or i[-1] == '(':
+#         print('NO')
+#     else:
+#         for j in i:
+#             if j =='(':
+#                 count += 1
+#             else:
+#                 count -= 1
+#             if count < 0:
+#                 print('NO')
+#                 break
+#         else:
+#             if count == 0:
+#                 print('YES')   
+#             else:
+#                 print('NO')
