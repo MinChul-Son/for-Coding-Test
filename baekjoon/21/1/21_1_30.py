@@ -26,3 +26,28 @@
 
 
 
+# https://www.acmicpc.net/problem/11399
+# import sys
+# n = int(input())
+# N = list(map(int,input().split()))
+# N.sort()
+# answer = 0
+# time_sum = 0
+# for i in N:
+#     time_sum += i
+#     answer += time_sum
+# print(answer)
+
+# https://www.acmicpc.net/problem/1541
+# n = input().split('-')
+# print(n)
+# answer = 0
+# for i in n[0].split('+'):
+#     answer += int(i)
+# for i in n[1:]:
+#     for j in i.split('+'):
+#         answer -= int(j)
+# print(answer)
+
+# https://www.acmicpc.net/problem/13305
+
