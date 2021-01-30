@@ -110,3 +110,86 @@
 #                 print('YES')   
 #             else:
 #                 print('NO')
+
+
+# https://www.acmicpc.net/problem/4949
+# while True:
+#     string = input()
+#     stack = []
+#     temp = True
+#     if string == '.':
+#         break
+#     for i in string:
+#         if i == '(' or i == '[':
+#             stack.append(i)
+#         elif i == ')':
+#             if not stack or stack[-1] == '[':
+#                 temp = False
+#                 break
+#             elif stack[-1] == '(':
+#                 stack.pop()
+#         elif i == ']':
+#             if not stack or stack[-1] == '(':
+#                 temp = False
+#                 break
+#             elif stack[-1] == '[':
+#                 stack.pop() 
+#     if temp == True and not stack:
+#         print('yes')
+#     else:
+#         print('no')
+        
+
+# https://www.acmicpc.net/problem/1874
+# import sys
+# n = int(input())
+# N = list(sys.stdin.readline().strip() for _ in range(n))
+# stack = []
+# answer = []
+# count = 1
+# possible = True
+# for i in N:
+#     while count <= int(i):
+#         stack.append(count)
+#         answer.append('+')
+#         count += 1
+#     if stack.pop() == int(i):
+#         answer.append('-')
+#     else:
+#         possible = False
+# if possible:
+#     print('\n'.join(answer))
+# else:
+#     print('NO')
+
+
+# https://www.acmicpc.net/problem/17298
+# n = int(input())
+# N = list(map(int,input().split()))
+# answer = []
+# for i,p in enumerate(N):
+#     stack = []
+#     for j in range(i,n):
+#         if p<N[j]:
+#             print(N[j], end=" ")
+#             break
+#     else:
+#         print(-1,end=" ")
+
+
+num = int(input())
+a = list(map(int, input().split(" ")))
+result = ["-1" for _ in range(num)]
+stack = []
+stack.append(0)
+i = 1
+for i in range(num):
+    while stack and a[stack[-1]] < a[i]:
+        result[stack[-1]] = str(a[i])
+        stack.pop()
+
+    stack.append(i)
+    i += 1
+
+print(" ".join(result))
+
