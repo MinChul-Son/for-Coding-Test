@@ -58,26 +58,26 @@
 
 
 # https://www.acmicpc.net/problem/1966
-from collections import deque
-test_case = int(input())
-for _ in range(test_case):
-    queue = deque()
-    count = 0
-    n, m = map(int, input().split())
-    important = list(map(int,input().split()))
-    if n == 1:
-        print(1)
-    else:
-        for i,p in enumerate(important):
-            queue.append([p,i])
-        while True:
-            if queue[0][0] == (max(queue))[0]:
-                count += 1
-                if queue[0][1] == m:
-                    break
-                else:
-                    queue.popleft()
-            else:
-                queue.append(queue.popleft())
-        print(count)
+# from collections import deque
+# test_case = int(input())
+# for _ in range(test_case):
+#     queue = deque()
+#     count = 0
+#     n, m = map(int, input().split())
+#     important = list(map(int,input().split()))
+#     if n == 1:
+#         print(1)
+#     else:
+#         for i,p in enumerate(important):
+#             queue.append([p,i])
+#         while True:
+#             if queue[0][0] == (max(queue))[0]:
+#                 count += 1
+#                 if queue[0][1] == m:
+#                     break
+#                 else:
+#                     queue.popleft()
+#             else:
+#                 queue.append(queue.popleft())
+#         print(count)
 
