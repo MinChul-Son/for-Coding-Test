@@ -8,3 +8,8 @@
 #     m = math.factorial(m)
 #     n = math.factorial(n)
 #     print(m//(n*temp))
+
+# https://www.acmicpc.net/problem/1037
+# n = int(input())
+# N = list(map(int,input().split()))
+# print(min(N)*max(N))
