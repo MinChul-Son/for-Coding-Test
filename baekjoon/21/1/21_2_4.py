@@ -13,3 +13,39 @@
 # n = int(input())
 # N = list(map(int,input().split()))
 # print(min(N)*max(N))
+
+# https://www.acmicpc.net/problem/1158
+# from collections import deque
+# n, k = map(int,input().split())
+# answer = []
+# queue = deque([i for i in range(1,n+1)])
+# while queue:
+#     for i in range(1,k+1):
+#         if i == k:
+#             answer.append(queue.popleft())
+#         else:
+#             queue.append(queue.popleft())
+# print('<'+", ".join(map(str,answer))+'>')
+
+# https://www.acmicpc.net/problem/1316
+# n = int(input())
+# answer = 0
+# for _ in range(n):
+#     string = input()
+#     used_list = []
+#     temp = ''
+#     for i in string:
+#         if temp == '':
+#             temp = i
+#             used_list.append(temp)
+#         elif temp == i:
+#             pass
+#         else:
+#             if i in used_list:
+#                 break
+#             else:
+#                 used_list.append(i)
+#                 temp = i
+#     else:
+#         answer += 1
+# print(answer)
