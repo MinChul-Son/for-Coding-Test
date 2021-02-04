@@ -49,3 +49,28 @@
 #     else:
 #         answer += 1
 # print(answer)
+
+
+
+# https://www.acmicpc.net/problem/2941
+
+# string = input()
+# alpha_list = ['c=','c-','dz=','d-','lj','nj','s=','z=']
+# for i in alpha_list:
+#     string = string.replace(i, '*')
+# print(len(string))
+
+
+# https://www.acmicpc.net/problem/1065
+# n = int(input())
+# answer = 0
+# for i in range(1,n+1):
+#     temp = str(i)
+#     if len(temp) == 1 or len(temp) == 2:
+#         answer += 1
+#     elif len(temp) == 3:
+#         if (int(temp[0]) - int(temp[1])) == (int(temp[1]) - int(temp[2])):
+#             answer += 1
+# print(answer)
+
+
