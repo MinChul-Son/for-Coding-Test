@@ -174,3 +174,16 @@
 #         M -= 19
 # print(answer)
 
+# https://www.acmicpc.net/problem/1475
+from math import ceil
+n = list(map(int,list(input())))
+count_num = [0 for _ in range(10)]
+for i in n:
+    if i == 6 or i == 9:
+        if count_num[6] == count_num[9]:
+            count_num[6] += 1
+        else:
+            count_num[9] += 1
+    else:
+        count_num[i] += 1
+print(max(count_num))
