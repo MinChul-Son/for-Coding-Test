@@ -12,3 +12,21 @@
 #             x -= q
 #             cnt +=1
 #     print(cnt)
+
+# https://www.acmicpc.net/problem/11004
+# n ,k = map(int, input().split())
+# A = list(map(int, input().split()))
+# A.sort()
+# print(A[k-1])
+
+# https://www.acmicpc.net/problem/10610
+n = list(input())
+n.sort(reverse=True)
+print(n)
+answer =  -1
+max = 0
+if n[-1] == '0':
+    max = int("".join(n))
+    if max % 3 == 0:
+        answer = max
+print(answer)
