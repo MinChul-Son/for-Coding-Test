@@ -175,7 +175,6 @@
 # print(answer)
 
 # https://www.acmicpc.net/problem/1475
-from math import ceil
 n = list(map(int,list(input())))
 count_num = [0 for _ in range(10)]
 for i in n:
