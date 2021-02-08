@@ -51,22 +51,22 @@
 # print(answer)
 
 # https://www.acmicpc.net/problem/2581
-m = int(input())
-n = int(input())
-temp_list = []
-for i in range(m, n+1):
-    count = 0
-    if i != 1:
-        for j in range(1, i+1):
-            if i % j == 0:
-                count += 1
-        if count == 2:
-            temp_list.append(i)
-if temp_list:
-    print(sum(temp_list))
-    print(min(temp_list))
-else:
-    print(-1)
+# m = int(input())
+# n = int(input())
+# temp_list = []
+# for i in range(m, n+1):
+#     count = 0
+#     if i != 1:
+#         for j in range(1, i+1):
+#             if i % j == 0:
+#                 count += 1
+#         if count == 2:
+#             temp_list.append(i)
+# if temp_list:
+#     print(sum(temp_list))
+#     print(min(temp_list))
+# else:
+#     print(-1)
 
 
 
