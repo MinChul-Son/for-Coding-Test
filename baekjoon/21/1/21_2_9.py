@@ -79,13 +79,13 @@
 
 
 # https://www.acmicpc.net/problem/1929
-m, n = map(int, input().split())
-n += 1
-num_list = [True for _ in range(n)]
-for i in range(2, int(n**0.5) + 1):
-    if num_list[i] == True:
-        for j in range(2*i, n, i):
-            num_list[j] = False
-for i in range(m, n):
-    if i >1 and num_list[i] == True:
-        print(i)
+# m, n = map(int, input().split())
+# n += 1
+# num_list = [True for _ in range(n)]
+# for i in range(2, int(n**0.5) + 1):
+#     if num_list[i] == True:
+#         for j in range(2*i, n, i):
+#             num_list[j] = False
+# for i in range(m, n):
+#     if i >1 and num_list[i] == True:
+#         print(i)
