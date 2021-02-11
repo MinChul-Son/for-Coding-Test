@@ -22,4 +22,18 @@
 # print(fibonacci(n))
 
 
-# https://www.acmicpc.net/problem/2447
+# https://www.acmicpc.net/problem/10819
+# from itertools import permutations
+# n = int(input())
+# num_list = list(map(int, input().split()))
+# num_list = list(permutations(num_list,n))
+# max = 0
+# for i in num_list:
+#     temp = 0
+#     for j in range(0,n-1):
+#         temp += abs(i[j]-i[j+1])
+#     if temp > max:
+#         max = temp
+# print(max)
+
+
