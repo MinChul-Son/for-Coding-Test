@@ -36,4 +36,11 @@
 #         max = temp
 # print(max)
 
+# https://www.acmicpc.net/problem/11053
 
+# n= int(input()) 
+# nl = list(map(int,input().split())) 
+# arr = [0]*1001 
+# for i in nl: 
+#     arr[i] = max(arr[:i]) + 1
+# print(max(arr))
