@@ -35,5 +35,14 @@
 #             print("neither")
 
 
+# https://www.acmicpc.net/problem/3036
+from math import gcd
+n = int(input())
+ring_list = list(map(int, input().split()))
+for i in range(1,n):
+    gcd_num = gcd(ring_list[0],ring_list[i])
+    print(ring_list[0]//gcd_num, end="")
+    print("/", end="")
+    print(ring_list[i]//gcd_num)
 
 
