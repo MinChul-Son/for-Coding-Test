@@ -29,14 +29,14 @@
 #     print(answer)
 
 # https://www.acmicpc.net/problem/1676
-from math import factorial
-n = int(input())
-fac = list(str(factorial(n)))
-fac.reverse()
-count = 0
-for i in fac:
-    if i == '0':
-        count += 1
-    else:
-        break
-print(count)
+# from math import factorial
+# n = int(input())
+# fac = list(str(factorial(n)))
+# fac.reverse()
+# count = 0
+# for i in fac:
+#     if i == '0':
+#         count += 1
+#     else:
+#         break
+# print(count)
