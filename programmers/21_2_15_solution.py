@@ -38,3 +38,33 @@
 #     return new_id
 
 # solution("abcdefghijklmn.p")
+
+
+# https://programmers.co.kr/learn/courses/30/lessons/72411?language=python3
+from itertools import combinations
+def solution(orders, course):
+    answer = []
+    for i in course:
+        combi_list = []
+        count_list = []
+        for j in orders:
+            if len(j) < i:
+                continue
+            temp = list(combinations(sorted(list(j)),i))
+            combi_list.extend(temp)
+        for j in set(combi_list):
+            count_list.append((combi_list.count(j),j))
+        count_list.sort(reverse=True)
+        for j in range(0,len(count_list)-1):
+            if count_list[j][0] == 1:
+                break
+            if count_list[j][0] != count_list[j+1][0]:
+                answer.append("".join(count_list[j][1]))
+                break
+            else:
+                answer.append("".join(count_list[j][1]))
+        answer.sort()
+    print(answer)
+    return answer
+
+solution(["XYZ", "XWY", "WXA"],[2,3,4])
