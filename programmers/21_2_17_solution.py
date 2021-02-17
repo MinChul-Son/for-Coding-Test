@@ -53,11 +53,22 @@
 
 
 # https://www.acmicpc.net/problem/1764
-import sys
-n, m = map(int, input().split())
-ears = set([sys.stdin.readline().strip() for _ in range(n)])
-eyes = set([sys.stdin.readline().strip() for _ in range(m)])
-ears_eyes = sorted(list(ears & eyes))
-print(len(ears_eyes))
-for i in ears_eyes:
-    print(i)
+# import sys
+# n, m = map(int, input().split())
+# ears = set([sys.stdin.readline().strip() for _ in range(n)])
+# eyes = set([sys.stdin.readline().strip() for _ in range(m)])
+# ears_eyes = sorted(list(ears & eyes))
+# print(len(ears_eyes))
+# for i in ears_eyes:
+#     print(i)
+
+# https://www.acmicpc.net/problem/1032
+# n = int(input())
+# answer_1 = list(str(input()))
+
+# for i in range(n-1):
+#     answer_2 = list(str(input()))
+#     for j in range(len(answer_1)):
+#         if answer_1[j] != answer_2[j]:
+#             answer_1[j] = '?'
+# print(''.join(answer_1))
