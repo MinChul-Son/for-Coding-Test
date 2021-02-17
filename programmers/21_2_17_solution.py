@@ -50,3 +50,14 @@
 # s = list(input().split("-"))
 # for i in s:
 #     print(i[0], end="")
+
+
+# https://www.acmicpc.net/problem/1764
+import sys
+n, m = map(int, input().split())
+ears = set([sys.stdin.readline().strip() for _ in range(n)])
+eyes = set([sys.stdin.readline().strip() for _ in range(m)])
+ears_eyes = sorted(list(ears & eyes))
+print(len(ears_eyes))
+for i in ears_eyes:
+    print(i)
