@@ -25,3 +25,28 @@
 # print(lcs[-1][-1])
 
 # https://www.acmicpc.net/problem/1100
+# import sys
+# chess = [sys.stdin.readline().strip() for _ in range(8)]
+# count = 0
+# color = True
+# for i in chess:
+#     for j,p in enumerate(i):
+#         if p == "F" and color:
+#             count += 1
+#         else:
+#             pass
+#         if j == 7:
+#             pass
+#         else:
+#             if color:
+#                 color = False
+#             else:
+#                 color = True
+# print(count)
+
+
+
+# https://www.acmicpc.net/problem/2902
+# s = list(input().split("-"))
+# for i in s:
+#     print(i[0], end="")
