@@ -9,14 +9,26 @@
 
 
 # https://www.acmicpc.net/problem/10815
-from bisect import bisect_left, bisect_right
+# from bisect import bisect_left, bisect_right
+# n = int(input())
+# my_card = sorted(list(map(int, input().split())))
+# m = int(input())
+# input_card = list(map(int, input().split()))
+# for i in input_card:
+#     if bisect_left(my_card, i) == bisect_right(my_card, i):
+#         print(0, end=" ")
+#     else:
+#         print(1, end=" ")
+
+
+# https://www.acmicpc.net/problem/2217
+import sys
 n = int(input())
-my_card = sorted(list(map(int, input().split())))
-m = int(input())
-input_card = list(map(int, input().split()))
-for i in input_card:
-    if bisect_left(my_card, i) == bisect_right(my_card, i):
-        print(0, end=" ")
-    else:
-        print(1, end=" ")
+rope = sorted([int(sys.stdin.readline().strip()) for _ in range(n)])
+weight_list = []
+for i in range(n):
+    weight_list.append(n*rope[i])
+    n -= 1
+print(max(weight_list))
+
 
