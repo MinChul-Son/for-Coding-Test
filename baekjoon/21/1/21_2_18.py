@@ -54,11 +54,26 @@
 
 
 # https://www.acmicpc.net/problem/11656
-s = input()
-suffix_list = []
-for i in range(len(s)):
-    suffix_list.append(s[i:])
-for i in sorted(suffix_list):
-    print(i)
+# s = input()
+# suffix_list = []
+# for i in range(len(s)):
+#     suffix_list.append(s[i:])
+# for i in sorted(suffix_list):
+#     print(i)
 
+
+# https://www.acmicpc.net/problem/1946
+# import sys
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     count = 0
+#     rank_list = sorted([list(map(int, sys.stdin.readline().split())) for _ in range(n)])
+#     min_person = rank_list[0]
+#     for i in range(1, n):
+#         if rank_list[i][1] > min_person[1]:
+#             count += 1
+#         else:
+#             min_person = rank_list[i]
+#     print(n-count)
 
