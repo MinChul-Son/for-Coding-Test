@@ -22,13 +22,29 @@
 
 
 # https://www.acmicpc.net/problem/2217
-import sys
-n = int(input())
-rope = sorted([int(sys.stdin.readline().strip()) for _ in range(n)])
-weight_list = []
-for i in range(n):
-    weight_list.append(n*rope[i])
-    n -= 1
-print(max(weight_list))
+# import sys
+# n = int(input())
+# rope = sorted([int(sys.stdin.readline().strip()) for _ in range(n)])
+# weight_list = []
+# for i in range(n):
+#     weight_list.append(n*rope[i])
+#     n -= 1
+# print(max(weight_list))
+
+
+# https://www.acmicpc.net/problem/1920
+# from bisect import bisect_left, bisect_right
+# n = int(input())
+# N = sorted(list(map(int, input().split())))
+# m = int(input())
+# M = list(map(int, input().split()))
+# for i in M:
+#     if bisect_left(N, i) == bisect_right(N, i):
+#         print(0)
+#     else:
+#         print(1)
+
+# https://www.acmicpc.net/problem/10825
+
 
 
