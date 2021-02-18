@@ -45,6 +45,20 @@
 #         print(1)
 
 # https://www.acmicpc.net/problem/10825
+# import sys
+# n = int(input())
+# student_score = [list(sys.stdin.readline().split()) for _ in range(n)]
+# student_score.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]),x[0]))
+# for i in student_score:
+#     print(i[0])
 
+
+# https://www.acmicpc.net/problem/11656
+s = input()
+suffix_list = []
+for i in range(len(s)):
+    suffix_list.append(s[i:])
+for i in sorted(suffix_list):
+    print(i)
 
 
