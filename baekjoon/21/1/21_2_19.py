@@ -65,13 +65,38 @@
 
 
 # https://www.acmicpc.net/problem/10816
-from bisect import bisect_left, bisect_right
-n = int(input())
-my_card = sorted(list(map(int, input().split())))
-m = int(input())
-num_card = list(map(int, input().split()))
-for i in num_card:
-    print(bisect_right(my_card, i) - bisect_left(my_card, i), end=" ")
+# from bisect import bisect_left, bisect_right
+# n = int(input())
+# my_card = sorted(list(map(int, input().split())))
+# m = int(input())
+# num_card = list(map(int, input().split()))
+# for i in num_card:
+#     print(bisect_right(my_card, i) - bisect_left(my_card, i), end=" ")
+
+
+
+# https://www.acmicpc.net/problem/1021
+from collections import deque
+n, m = map(int, input().split())
+queue = deque([i for i in range(1, n+1)])
+pop_list = list(map(int, input().split()))
+count = 0
+for i in pop_list:
+    while True:
+        if queue[0] == i:
+            queue.popleft()
+            break
+        else:
+            if queue.index(i) <= len(queue)//2:
+                queue.rotate(-1)
+                count += 1
+            else:
+                queue.rotate(1)
+                count += 1
+print(count)
+
+
+
 
 
 
