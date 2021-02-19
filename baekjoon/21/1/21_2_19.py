@@ -98,19 +98,19 @@
 
 
 # https://www.acmicpc.net/problem/11279
-import sys
-import heapq
-n = int(input())
-queue = []
-for _ in range(n):
-    x = int(sys.stdin.readline())
-    if x == 0:
-        if not queue:
-            print(0)
-        else:
-            print(heapq.heappop(queue)[1])
-    else:
-        heapq.heappush(queue, (-x, x))
+    # import sys
+    # import heapq
+    # n = int(input())
+    # queue = []
+    # for _ in range(n):
+    #     x = int(sys.stdin.readline())
+    #     if x == 0:
+    #         if not queue:
+    #             print(0)
+    #         else:
+    #             print(heapq.heappop(queue)[1])
+    #     else:
+    #         heapq.heappush(queue, (-x, x))
 
 
 
