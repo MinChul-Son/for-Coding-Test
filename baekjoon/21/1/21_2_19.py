@@ -76,24 +76,41 @@
 
 
 # https://www.acmicpc.net/problem/1021
-from collections import deque
-n, m = map(int, input().split())
-queue = deque([i for i in range(1, n+1)])
-pop_list = list(map(int, input().split()))
-count = 0
-for i in pop_list:
-    while True:
-        if queue[0] == i:
-            queue.popleft()
-            break
+# from collections import deque
+# n, m = map(int, input().split())
+# queue = deque([i for i in range(1, n+1)])
+# pop_list = list(map(int, input().split()))
+# count = 0
+# for i in pop_list:
+#     while True:
+#         if queue[0] == i:
+#             queue.popleft()
+#             break
+#         else:
+#             if queue.index(i) <= len(queue)//2:
+#                 queue.rotate(-1)
+#                 count += 1
+#             else:
+#                 queue.rotate(1)
+#                 count += 1
+# print(count)
+
+
+
+# https://www.acmicpc.net/problem/11279
+import sys
+import heapq
+n = int(input())
+queue = []
+for _ in range(n):
+    x = int(sys.stdin.readline())
+    if x == 0:
+        if not queue:
+            print(0)
         else:
-            if queue.index(i) <= len(queue)//2:
-                queue.rotate(-1)
-                count += 1
-            else:
-                queue.rotate(1)
-                count += 1
-print(count)
+            print(heapq.heappop(queue)[1])
+    else:
+        heapq.heappush(queue, (-x, x))
 
 
 
