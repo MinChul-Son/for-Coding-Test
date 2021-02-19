@@ -64,6 +64,15 @@
 
 
 
+# https://www.acmicpc.net/problem/10816
+from bisect import bisect_left, bisect_right
+n = int(input())
+my_card = sorted(list(map(int, input().split())))
+m = int(input())
+num_card = list(map(int, input().split()))
+for i in num_card:
+    print(bisect_right(my_card, i) - bisect_left(my_card, i), end=" ")
+
 
 
 
