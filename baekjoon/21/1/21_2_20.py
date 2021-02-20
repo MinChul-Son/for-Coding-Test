@@ -185,3 +185,32 @@
 #         else:
 #             print("%s," %(answer[i]), end='')
 #     print("]")
+
+
+
+# https://www.acmicpc.net/problem/5397
+import sys
+t = int(input())
+for _ in range(t):
+    l = sys.stdin.readline().strip()
+    password = []
+    current_idx = 0
+    for i in l:
+        if i == '<':
+            if current_idx == 0:
+                pass
+            else:
+                current_idx -= 1
+        elif i == '>':
+            if current_idx == len(password):
+                pass
+            else:
+                current_idx += 1
+        elif i == '-':
+            password.pop(current_idx-1)
+            current_idx -= 1
+        else:
+            password.insert(current_idx,i)
+            current_idx += 1
+    print("".join(password))
+
