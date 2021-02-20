@@ -78,3 +78,27 @@
 
 
 
+# https://www.acmicpc.net/problem/5430
+import sys
+from collections import deque
+t = int(input())
+
+for _ in range(t):
+    p = sys.stdin.readline().strip()
+    n = int(sys.stdin.readline())
+    temp_list = sys.stdin.readline().strip().split(",")
+    if p.count('D') > n:
+        print("error")
+        continue
+    temp_list[0] = temp_list[0][1:]
+    temp_list[-1] = temp_list[-1][:-1]
+    temp_list = deque(temp_list)
+    for i in p:
+        if i == 'R':
+            temp_list.reverse()
+        else:
+            temp_list.popleft()
+    temp_list = list(map(int, temp_list))
+    print(temp_list)
+
+
