@@ -16,27 +16,30 @@
 
 
 # https://www.acmicpc.net/problem/2493
-import sys
-input=sys.stdin.readline
+# import sys
+# input=sys.stdin.readline
 
-n=int(input())
-arr=list(map(int,input().split()))
-stack=[]
-ans=[]
-for i in range(0,n):
-    while True:
-        if not stack:
-            stack.append((i,arr[i]))
-            ans.append(0)
-            break
-        if stack[-1][1]>=arr[i]:
-            ans.append(stack[-1][0]+1)
-            stack.append((i,arr[i]))
-            break
-        else:
-            stack.pop()
-    print(stack,ans)
-print(*ans)
+# n=int(input())
+# arr=list(map(int,input().split()))
+# stack=[]
+# ans=[]
+# for i in range(0,n):
+#     while True:
+#         if not stack:
+#             stack.append((i,arr[i]))
+#             ans.append(0)
+#             break
+#         if stack[-1][1]>=arr[i]:
+#             ans.append(stack[-1][0]+1)
+#             stack.append((i,arr[i]))
+#             break
+#         else:
+#             stack.pop()
+# print(*ans)
+
+
+
+
 
 
 
