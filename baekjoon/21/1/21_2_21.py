@@ -54,6 +54,47 @@
 #         if N_list[k] < min_num:
 #             min_num = N_list[k]
 #     print(min_num, max_num)
+## 실패
+
+
+
+# https://www.acmicpc.net/problem/1918
+# import sys
+# from math import sqrt
+# input=sys.stdin.readline
+
+# d={'*':2,'/':2,'+':1,'-':1,'(':0,')':0}
+# q=[]
+# s=input().strip()
+# for x in s:
+#     # 알파벳 출력
+#     if x not in d:
+#         print(x,end='')
+#     #왼쪽 괄호 
+#     elif x=='(':
+#         q.append(x)
+#     # 오른쪽 괄호시 왼쪽 괄호 나올때까지 중간 연산자 출력한다 
+#     elif x==')':
+#         while q:
+#             cur=q.pop()
+#             if cur=='(': break
+#             print(cur,end='')
+#     else:
+#         # 우선순위가 더 낮다면 이전에 우선순위 높은 연산자를 출력한다 
+#         while q and q[-1]!='(' and d[x]<=d[q[-1]]:
+#             print(q.pop(),end='')
+#         q.append(x)
+
+# # 나머지 연산자를 출력한다 
+# while q:
+#     print(q.pop(),end='')
+        
+
+
+
+
+
+
 
 
 
