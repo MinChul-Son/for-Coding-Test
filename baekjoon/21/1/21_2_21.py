@@ -40,6 +40,20 @@
 
 
 
+# https://www.acmicpc.net/problem/2357
+# import sys
+# n, m = map(int, input().split())
+# N_list = [int(sys.stdin.readline()) for _ in range(n)]
+# M_list = [list(map(int, sys.stdin.readline().split())) for _ in range(m)]
+# for i,j in M_list:
+#     max_num = N_list[i-1]
+#     min_num = N_list[i-1]
+#     for k in range(i-1, j):
+#         if N_list[k] > max_num:
+#             max_num = N_list[k]
+#         if N_list[k] < min_num:
+#             min_num = N_list[k]
+#     print(min_num, max_num)
 
 
 
