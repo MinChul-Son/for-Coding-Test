@@ -64,3 +64,19 @@
 #         if lst[i] > lst[j]:
 #             dp[i] = max(dp[i], dp[j] + lst[i])
 # print(max(dp))
+
+
+# https://www.acmicpc.net/problem/11722
+
+n = int(input())
+n_list = list(map(int, input().split()))
+
+dp = [1 for _ in range(n)]
+
+for i in range(n):
+    for j in range(i):
+        if n_list[i] < n_list[j]:
+            dp[i] = max(dp[i], dp[j]+1)
+print(dp)
+
+
