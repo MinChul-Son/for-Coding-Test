@@ -26,3 +26,18 @@
 # 		dp[i] = dp[i-1] + dp[i-2]
 
 # 	print(dp[i]%10007)
+
+# https://www.acmicpc.net/problem/1912
+# n = int(input())
+# n_list = list(map(int, input().split()))
+# dp = [0 for _ in range(n)]
+# for i in range(1, n-1):
+#     dp[i] = max(dp[i-1], n_list[i-1], n_list[i-1]+dp[i-1])
+# print(dp)
+
+# n = int(input())
+# a = list(map(int, input().split()))
+# sum = [a[0]]
+# for i in range(n - 1):
+#     sum.append(max(sum[i] + a[i + 1], a[i + 1]))
+# print(max(sum))
