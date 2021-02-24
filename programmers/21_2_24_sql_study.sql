@@ -22,3 +22,24 @@ from time
     left outer join animal_outs on (hour = date_format(datetime, '%H') )
 group by hour;
 
+
+
+-- https://programmers.co.kr/learn/courses/30/lessons/59410?language=mysql
+SELECT ANIMAL_TYPE, IFNULL(NAME, "No name") NAME, SEX_UPON_INTAKE 
+FROM ANIMAL_INS;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
