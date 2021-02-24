@@ -14,3 +14,9 @@
 
 
 # https://www.acmicpc.net/problem/10974
+# from itertools import permutations
+# n = int(input())
+# n_list = [i for i in range(1, n+1)]
+# n_list = sorted(list(permutations(n_list, n)))
+# for i in n_list:
+#     print(*i)
