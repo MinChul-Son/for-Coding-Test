@@ -51,14 +51,42 @@
 
 
 # https://www.acmicpc.net/problem/9461
-wh = [0 for i in range(101)]
-wh[1] = 1
-wh[2] = 1
-wh[3] = 1
-for i in range(0, 98):
-    wh[i + 3] = wh[i] + wh[i + 1]
-t = int(input())
+# wh = [0 for i in range(101)]
+# wh[1] = 1
+# wh[2] = 1
+# wh[3] = 1
+# for i in range(0, 98):
+#     wh[i + 3] = wh[i] + wh[i + 1]
+# t = int(input())
 
-for _ in range(t):
-    n = int(input())
-    print(wh[n])
+# for _ in range(t):
+#     n = int(input())
+#     print(wh[n])
+
+
+
+# https://www.acmicpc.net/problem/11723
+# import sys
+# s = set()
+# m = int(sys.stdin.readline())
+# for _ in range(m):
+#     order = list(sys.stdin.readline().split())
+#     if order[0] == 'add':
+#         s.add(order[1])
+#     elif order[0] == 'remove':
+#         s.discard(order[1])
+#     elif order[0] == 'check':
+#         if order[1] in s:
+#             print(1)
+#         else:
+#             print(0)
+#     elif order[0] == 'toggle':
+#         if order[1] in s:
+#             s.discard(order[1])
+#         else:
+#             s.add(order[1])
+#     elif order[0] == 'all':
+#         s = {'1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'}
+#     elif order[0] == 'empty':
+#         s = set()
+        
