@@ -90,3 +90,13 @@
 #     elif order[0] == 'empty':
 #         s = set()
         
+
+
+# https://www.acmicpc.net/problem/17219
+# import sys
+# n, m = map(int, sys.stdin.readline().split())
+# password_list = dict(sys.stdin.readline().split() for _ in range(n))
+
+# for _ in range(m):
+#     site = sys.stdin.readline().strip()
+#     print(password_list.get(site))
