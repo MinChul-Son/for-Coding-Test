@@ -30,3 +30,7 @@ else:
 
 def solution(mylist):
     return list(map(list, zip(*mylist)))
+
+import itertools
+def solution(mylist):
+    return list(itertools.chain(*mylist))
