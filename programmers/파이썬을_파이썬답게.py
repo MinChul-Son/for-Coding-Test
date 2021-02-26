@@ -18,3 +18,11 @@ n = 7
 s.ljust(n) # 좌측 정렬
 s.center(n) # 가운데 정렬
 s.rjust(n) # 우측 정렬
+
+
+import string 
+num = int(input().strip())
+if num:
+    print(string.ascii_uppercase)
+else:
+    print(string.ascii_lowercase)
