@@ -33,7 +33,25 @@
 
 
 # https://www.acmicpc.net/problem/1748
-answer = 0
-for i in range(1, int(input())+1):
-    answer += len(str(i))
-print(answer)
+# answer = 0
+# for i in range(1, int(input())+1):
+#     answer += len(str(i))
+# print(answer)
+
+
+# https://www.acmicpc.net/problem/9935
+# s = input()
+# bomb = input()
+# lastChar = bomb[-1]
+# stack = []
+# length = len(bomb) 
+# for i in s:
+#     stack.append(i)
+#     if i == lastChar and "".join(stack[-length:]) == bomb:
+#         for _ in range(len(bomb)):
+#             stack.pop()
+# if stack:
+#     print("".join(stack))
+# else:
+#     print("FRULA")
+
