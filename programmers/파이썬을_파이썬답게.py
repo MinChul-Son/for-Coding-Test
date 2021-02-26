@@ -26,3 +26,7 @@ if num:
     print(string.ascii_uppercase)
 else:
     print(string.ascii_lowercase)
+
+
+def solution(mylist):
+    return list(map(list, zip(*mylist)))
