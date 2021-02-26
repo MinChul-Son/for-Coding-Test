@@ -5,3 +5,16 @@ def solution(mylist):
 
 def solution(mylist):
     return list(map(len, mylist))
+
+
+num = '3212'
+base = 5
+answer = int(num, base)
+
+
+s = '가나다라'
+n = 7
+
+s.ljust(n) # 좌측 정렬
+s.center(n) # 가운데 정렬
+s.rjust(n) # 우측 정렬
