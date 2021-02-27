@@ -54,6 +54,34 @@
 #     main()
 
 
+# def main():
+#     n = int(input())
+#     land_list = list(map(int, input().split()))
+#     answer = 0
+#     left = 0
+#     right = n-1
+#     while n != 1:
+#         n //= 2 
+#         max_left = max(land_list[left:left+n])
+#         max_right = max(land_list[left+n:right+1])
+#         if max_left > max_right:
+#             answer += max_left
+#             left += n
+#         else:
+#             answer += max_right
+#             right -= n
+#         print(answer)
+
+
+
+# if __name__=="__main__":
+#     main()
+
+
+
+
+
+
 # select b.buyer_id, b.buy_date, a.book_name, a.price from library a join orderInfo b
 # on a.book_id = b.book_id
 # where a.book_name = "Looking with Elice" or b.buy_date between "2020-07-27" and "2020-07-31"
