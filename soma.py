@@ -30,6 +30,31 @@
 #     main()
 
 # def main():
+#     n= int(input())
+#     n_list = [list(map(int, input().split())) for _ in range(n**2)]
+#     max_time = 0
+#     for i in n_list:
+#         for j in range(2, 2+i[1]):
+#             if i[j] > max_time:
+#                 max_time = i[j]
+#     time = [0 for _ in range(max_time+1)]
+#     for i in n_list:
+#         for j in range(2, 2+i[1]):
+#             if i[0] > time[i[j]]:
+#                 time[i[j]] = i[0]
+#     print(sum(time))
+
+# if __name__=="__main__":
+#     main()
+
+
+
+
+
+
+
+
+# def main():
 #     n = int(input())
 #     step_list = list(map(int, input().split()))
 #     visited = [0 for _ in range(n)]
