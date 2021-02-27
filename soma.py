@@ -29,18 +29,29 @@
 # if __name__=="__main__":
 #     main()
 
-from bisect import bisect_left, bisect_right
-def main():
-    n, m, e = map(int, input().split())
-    peanut_list = list(map(int, input().split()))
-    answer = 0
-    count = 0
-    while count != m:
+# def main():
+#     n = int(input())
+#     step_list = list(map(int, input().split()))
+#     visited = [0 for _ in range(n)]
+#     answer = 0
+#     for i in range(3):
+#         temp_list = list(map(list, zip(step_list, visited)))
+#         count = 1
+#         current_location = i
+#         while True:
+#             if temp_list[current_location][1] == 1:
+#                 break
+#             count += 1
+#             temp_list[current_location][1] = 1
+#             current_location += temp_list[current_location][0]
+#         if count > answer:
+#             answer = count
+#     print(answer)
 
-    
 
-if __name__=="__main__":
-    main()
+
+# if __name__=="__main__":
+#     main()
 
 
 # select b.buyer_id, b.buy_date, a.book_name, a.price from library a join orderInfo b
