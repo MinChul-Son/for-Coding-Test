@@ -54,4 +54,8 @@
 # print(count)
 
 
-# https://www.acmicpc.net/problem/2178
+# https://www.acmicpc.net/problem/1629
+# a, b, c = map(int, input().split())
+# print(pow(a, b, c))
+
+
