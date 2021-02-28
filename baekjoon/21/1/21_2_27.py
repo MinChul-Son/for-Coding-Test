@@ -23,3 +23,6 @@
 #             stack[i].append(j)
 #             move += 1
 # print(move)
+
+
+
