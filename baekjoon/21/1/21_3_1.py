@@ -58,15 +58,15 @@
 
 
 # https://www.acmicpc.net/problem/6603
-from collections import deque
-from itertools import combinations
-while True:
-    test_case = deque(map(int, input().split()))
-    k = test_case.popleft()
-    if not k:
-        break
-    test_case = list(combinations(test_case, 6))
-    for i in test_case:
-        print(*i)
-    print()
+# from collections import deque
+# from itertools import combinations
+# while True:
+#     test_case = deque(map(int, input().split()))
+#     k = test_case.popleft()
+#     if not k:
+#         break
+#     test_case = list(combinations(test_case, 6))
+#     for i in test_case:
+#         print(*i)
+#     print()
     
