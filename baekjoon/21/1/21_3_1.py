@@ -39,18 +39,18 @@ sys.setrecursionlimit(10000)
 def dfs(i):
     visited[i] = True
     for j in range(1, n + 1):
-        if graph[i][j] == 1 and visited[j] == 0:
+        if graph[i][j] and not visited[j]:
             dfs(j)
-n, m = map(int, input().split())
+n, m = map(int, sys.stdin.readline().split())
 graph = [[0] * (n+1) for _ in range(n+1)]
 for _ in range(m):
-    a, b = map(int, input().split())
+    a, b = map(int, sys.stdin.readline().split())
     graph[a][b] = 1
     graph[b][a] = 1
 visited = [False for _ in range(n+1)]
 result = 0
 for i in range(1, n+1):
-    if not visited[i]:
+    if not visited[i]: 
         dfs(i)
         result += 1
 print(result)
