@@ -51,24 +51,34 @@
 
 
 # https://www.acmicpc.net/problem/11725
-import sys 
-sys.setrecursionlimit(100000) #런타임 에러 방지 
-n = int(input()) 
-tree = [[] for _ in range(n+1)] # 양방향으로 노드를 연결하고 
-for _ in range(n-1): # 노드의 수 - 1 (간선) 
-    a, b = map(int, input().split()) 
-    tree[a].append(b) 
-    tree[b].append(a) # 각 노드의 부모 노드 값 저장용 
-parents = [0 for _ in range(n+1)] 
-parents[1] = 1 
-def dfs(curr, tree, parents):  
-    for node in tree[curr]: 
-        if parents[node] == 0: 
-            parents[node] = curr # 해당 자식 노드에 부모노드(curr) 값 넣음 
-            dfs(node, tree, parents) # 자식 노드가 서브 트리 루트로서 탐색 
-dfs(1, tree, parents) 
-for i in range(2, n+1):
-    print(parents[i])
+# import sys
+
+# node = int(input())
+# node_graph = [[] for _ in range(node + 1)]
+# parent = [[] for _ in range(node + 1)]
+
+# #트리를 그래프 형태로 생성
+
+# for _ in range(node - 1):
+#     i, j = map(int, sys.stdin.readline().split())
+#     node_graph[i].append(j)
+#     node_graph[j].append(i)
+
+# #DFS나 BFS나 무관
+
+# def dfs(graph_list, start, parent):
+#     stack = [start]
+    
+#     while stack:
+#         node = stack.pop()
+#         for i in graph_list[node]:
+#             parent[i].append(node)
+#             stack.append(i)
+#             graph_list[i].remove(node)
+#     return parent
+
+# for i in list(dfs(node_graph, 1, parent))[2:]:
+#     print(i[0])
 
 
 
