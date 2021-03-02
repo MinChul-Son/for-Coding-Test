@@ -33,12 +33,19 @@
 
 
 # https://www.acmicpc.net/problem/1965
+# n = int(input())
+# box_size = list(map(int, input().split()))
+# dp = [0 for _ in range(1001)]
+# for i in box_size:
+#     dp[i] = max(dp[:i]) + 1
+
+# print(max(dp))
+
+
+# https://www.acmicpc.net/problem/9655
 n = int(input())
-box_size = list(map(int, input().split()))
-dp = [0 for _ in range(10)]
-for i in box_size:
-    dp[i] = max(dp[:i]) + 1
-
-print(dp)
-
+if n%2 == 0:
+    print("CY")
+else:
+    print("SK")
 
