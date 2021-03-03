@@ -14,14 +14,18 @@
 
 
 # https://www.acmicpc.net/problem/1543
-import sys
-document = sys.stdin.readline().strip()
-search_word = sys.stdin.readline().strip()
-count = 0
-while True:
-    if search_word in document:
-        count += 1
-        document = document.replace(search_word, "", 1)
-    else:
-        break
-print(count)
+# import sys
+# document = sys.stdin.readline().strip()
+# search_word = sys.stdin.readline().strip()
+# index = 0
+# cnt = 0
+# while len(document) - index >= len(search_word):
+#     if document[index:index+len(search_word)] == search_word:
+#         cnt += 1
+#         index += len(search_word)
+#     else:
+#         index += 1
+# print(cnt)
+
+
+
