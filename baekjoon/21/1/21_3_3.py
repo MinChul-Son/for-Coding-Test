@@ -56,12 +56,22 @@
 
 # https://www.acmicpc.net/problem/10972
 import sys
-n = int(sys.stdin.readline())
-num_list = list(map(int, sys.stdin.readline().split()))
-if num_list == sorted(num_list, reverse=True):
-    print(-1)
-
-
+input = sys.stdin.readline
+n = int(input())
+s = list(map(int, input().split()))
+x = 0
+for i in range(n - 1, 0, -1):
+    if s[i - 1] < s[i]:
+        x = i - 1
+        break
+for i in range(n - 1, 0, -1):
+    if s[x] < s[i]:
+        s[x], s[i] = s[i], s[x]
+        s = s[:x + 1] + sorted(s[x + 1:])
+        print(*s)
+        exit()
+print(-1)
+    
 
 
 
