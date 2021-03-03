@@ -54,3 +54,16 @@
 
 
 
+# https://www.acmicpc.net/problem/10972
+import sys
+n = int(sys.stdin.readline())
+num_list = list(map(int, sys.stdin.readline().split()))
+if num_list == sorted(num_list, reverse=True):
+    print(-1)
+
+
+
+
+
+
+
