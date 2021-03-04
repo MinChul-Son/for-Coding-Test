@@ -15,6 +15,23 @@
 
 
 # https://www.acmicpc.net/problem/13241
-from math import gcd
-a, b = map(int, input().split())
-print(a*b//(gcd(a, b)))
+# from math import gcd
+# a, b = map(int, input().split())
+# print(a*b//(gcd(a, b)))
+
+
+
+# https://www.acmicpc.net/problem/1431
+import sys
+n = int(sys.stdin.readline())
+guitar_list = []
+for _ in range(n):
+    serial_number = sys.stdin.readline().strip()
+    number_sum = 0
+    for i in serial_number:
+        if i.isdigit():
+            number_sum += int(i)
+    guitar_list.append([serial_number, number_sum])
+guitar_list = sorted(guitar_list, key=lambda x: (len(x[0]), x[1], x[0]))
+for i in guitar_list:
+    print(i[0])
