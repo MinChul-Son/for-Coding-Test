@@ -37,4 +37,13 @@
 #     print(i[0])
 
 
-
+# https://www.acmicpc.net/problem/14425
+import sys
+n, m = map(int, sys.stdin.readline().split())
+set_S = set(sys.stdin.readline().strip() for _ in range(n))
+count = 0
+for _ in range(m):
+    check_string = sys.stdin.readline().strip()
+    if check_string in set_S:
+        count += 1
+print(count)
