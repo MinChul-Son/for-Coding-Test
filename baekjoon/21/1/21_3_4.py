@@ -61,3 +61,16 @@
 #     combi_list = list(combinations(num_list, m))
 #     for i in sorted(list(set(combi_list))):
 #         print(*i)
+
+
+# https://www.acmicpc.net/problem/15666
+# from itertools import permutations
+# n, m = map(int, input().split())
+# num_list = sorted(list(map(int, input().split())))
+# if m == 1:
+#     for i in sorted(list(set(num_list))):
+#         print(i)
+# else:
+#     permu_list = list(permutations(num_list, m))
+#     for i in sorted(list(set(permu_list))):
+#         print(*i)
