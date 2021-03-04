@@ -38,12 +38,26 @@
 
 
 # https://www.acmicpc.net/problem/14425
-import sys
-n, m = map(int, sys.stdin.readline().split())
-set_S = set(sys.stdin.readline().strip() for _ in range(n))
-count = 0
-for _ in range(m):
-    check_string = sys.stdin.readline().strip()
-    if check_string in set_S:
-        count += 1
-print(count)
+# import sys
+# n, m = map(int, sys.stdin.readline().split())
+# set_S = set(sys.stdin.readline().strip() for _ in range(n))
+# count = 0
+# for _ in range(m):
+#     check_string = sys.stdin.readline().strip()
+#     if check_string in set_S:
+#         count += 1
+# print(count)
+
+
+
+# https://www.acmicpc.net/problem/15664
+from itertools import combinations
+n, m = map(int, input().split())
+num_list = sorted(list(map(int, input().split())))
+if m == 1:
+    for i in sorted(list(set(num_list))):
+        print(i)
+else:
+    combi_list = list(combinations(num_list, m))
+    for i in sorted(list(set(combi_list))):
+        print(*i)
