@@ -14,3 +14,7 @@
 #         print(cum[j-1]-cum[i-2])
 
 
+# https://www.acmicpc.net/problem/13241
+from math import gcd
+a, b = map(int, input().split())
+print(a*b//(gcd(a, b)))
