@@ -48,13 +48,13 @@
 
 
 
-# https://www.acmicpc.net/problem/9934
-#pre-order 방식
-# root기준으로 왼쪽은 왼쪽 서브트리, 오른쪽은 오른쪽 서브트리
-
-k = int(input())
-visit_building = list(map(int, input().split()))
-root = visit_building[k]
-tree = [root]
+# https://www.acmicpc.net/problem/10826
+n = int(input())
+dp = [0 for _ in range(n+1)]
+dp[0] = 0
+dp[1] = 1
+for i in range(2, n+1):
+    dp[i] = dp[i-1] + dp[i-2]
+print(dp[n])
 
 
