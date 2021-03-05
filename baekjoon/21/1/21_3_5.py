@@ -27,22 +27,34 @@
 
 
 # https://www.acmicpc.net/problem/2312
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    child_list = []
-    devide_num = 2
-    while n != 1:
-        count = 0
-        while True:
-            if n % devide_num == 0:
-                n //= devide_num
-                count += 1
-            else:
-                break
-        child_list.append([devide_num, count])
-        devide_num += 1
-    for i in child_list:
-        if i[1]:
-            print(*i)
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     child_list = []
+#     devide_num = 2
+#     while n != 1:
+#         count = 0
+#         while True:
+#             if n % devide_num == 0:
+#                 n //= devide_num
+#                 count += 1
+#             else:
+#                 break
+#         child_list.append([devide_num, count])
+#         devide_num += 1
+#     for i in child_list:
+#         if i[1]:
+#             print(*i)
+
+
+
+# https://www.acmicpc.net/problem/9934
+#pre-order 방식
+# root기준으로 왼쪽은 왼쪽 서브트리, 오른쪽은 오른쪽 서브트리
+
+k = int(input())
+visit_building = list(map(int, input().split()))
+root = visit_building[k]
+tree = [root]
+
 
