@@ -58,3 +58,25 @@
 # print(answer)
 
 
+# https://www.acmicpc.net/problem/1305
+L = int(input())
+current_s = input()
+for i in range(1, L+1):
+    head = current_s[:i]
+    is_same = True
+    head_idx = 0
+    tail_idx = i
+    while is_same:
+        if head == current_s[head_idx:tail_idx]:
+            head_idx += 1
+            tail_idx += 1
+        else:
+            is_same = False
+        if tail_idx == L+1:
+            break
+    if is_same:
+        print(len(head))
+        break
+    
+
+
