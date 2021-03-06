@@ -31,3 +31,18 @@
 # print(len_a - max_cnt)
 
 # https://www.acmicpc.net/problem/17413
+from collections import deque
+s = deque(input())
+answer = ''
+queue = deque()
+while s:
+    temp = s.popleft()
+    if temp == "<":
+        pass
+    elif temp == " ":
+        answer += ("".join(reversed(queue)) + temp)
+        queue.clear()
+    else:
+        queue.append(temp)
+answer += ("".join(reversed(queue)))
+print(answer)
