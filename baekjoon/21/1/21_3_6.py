@@ -31,28 +31,30 @@
 # print(len_a - max_cnt)
 
 # https://www.acmicpc.net/problem/17413
-from collections import deque
-s = deque(input())
-answer = ''
-queue = deque()
-while s:
-    temp = s.popleft()
-    if temp == "<":
-        answer += "".join(reversed(queue))
-        queue.clear()
-        queue.append(temp)
-        while True:
-            find_close = s.popleft()
-            if find_close == ">":
-                queue.append(find_close)
-                break
-            queue.append(find_close)
-        answer += "".join(queue)
-        queue.clear()
-    elif temp == " ":
-        answer += ("".join(reversed(queue)) + temp)
-        queue.clear()
-    else:
-        queue.append(temp)
-answer += ("".join(reversed(queue)))
-print(answer)
+# from collections import deque
+# s = deque(input())
+# answer = ''
+# queue = deque()
+# while s:
+#     temp = s.popleft()
+#     if temp == "<":
+#         answer += "".join(reversed(queue))
+#         queue.clear()
+#         queue.append(temp)
+#         while True:
+#             find_close = s.popleft()
+#             if find_close == ">":
+#                 queue.append(find_close)
+#                 break
+#             queue.append(find_close)
+#         answer += "".join(queue)
+#         queue.clear()
+#     elif temp == " ":
+#         answer += ("".join(reversed(queue)) + temp)
+#         queue.clear()
+#     else:
+#         queue.append(temp)
+# answer += ("".join(reversed(queue)))
+# print(answer)
+
+
