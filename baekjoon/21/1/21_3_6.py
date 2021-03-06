@@ -38,7 +38,17 @@ queue = deque()
 while s:
     temp = s.popleft()
     if temp == "<":
-        pass
+        answer += "".join(reversed(queue))
+        queue.clear()
+        queue.append(temp)
+        while True:
+            find_close = s.popleft()
+            if find_close == ">":
+                queue.append(find_close)
+                break
+            queue.append(find_close)
+        answer += "".join(queue)
+        queue.clear()
     elif temp == " ":
         answer += ("".join(reversed(queue)) + temp)
         queue.clear()
