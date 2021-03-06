@@ -61,22 +61,18 @@
 # https://www.acmicpc.net/problem/1305
 L = int(input())
 current_s = input()
-for i in range(1, L+1):
-    head = current_s[:i]
-    is_same = True
-    head_idx = 0
-    tail_idx = i
-    while is_same:
-        if head == current_s[head_idx:tail_idx]:
-            head_idx += 1
-            tail_idx += 1
-        else:
-            is_same = False
-        if tail_idx == L+1:
-            break
-    if is_same:
-        print(len(head))
-        break
-    
+s_len = len(current_s)
+
+p_table = [0 for _ in range(s_len)]
+j = 0
+for i in range(1, s_len):
+    while j > 0 and current_s[i] != current_s[j]:
+        j = p_table[j-1]
+    if current_s[i] ==current_s[j]:
+        j += 1
+        p_table[i] = j
+p_len = s_len - p_table[s_len - 1]
+print(p_len)
+
 
 
