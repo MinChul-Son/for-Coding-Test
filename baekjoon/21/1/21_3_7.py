@@ -40,8 +40,9 @@
 
 
 # https://www.acmicpc.net/problem/16916
-s = input()
-p = input()
+import sys
+s = sys.stdin.readline().strip()
+p = sys.stdin.readline().strip()
 len_s = len(s)
 len_p = len(p)
 for i in range(len_s - len_p + 1):
