@@ -39,6 +39,6 @@
 #     print("%.4f" %((i[1]/len_list)*100))
 
 
-# https://www.acmicpc.net/problem/17609
+# https://www.acmicpc.net/problem/2608
 
 
