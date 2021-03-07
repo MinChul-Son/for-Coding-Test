@@ -40,5 +40,38 @@
 
 
 # https://www.acmicpc.net/problem/2608
-
+a = input(); b = input()
+sum_a = 0
+sum_b = 0
+for i in a:
+    if i == "I":
+        sum_a += 1
+    elif i == "V":
+        sum_a += 5
+    elif i == "X":
+        sum_a += 10
+    elif i == "L":
+        sum_a += 50
+    elif i == "C":
+        sum_a += 100
+    elif i == "D":
+        sum_a += 500
+    else:
+        sum_a += 1000
+for i in b:
+    if i == "I":
+        sum_b += 1
+    elif i == "V":
+        sum_b += 5
+    elif i == "X":
+        sum_b += 10
+    elif i == "L":
+        sum_b += 50
+    elif i == "C":
+        sum_b += 100
+    elif i == "D":
+        sum_b += 500
+    else:
+        sum_b += 1000
+print(sum_a+sum_b)
 
