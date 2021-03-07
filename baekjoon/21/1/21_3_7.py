@@ -20,21 +20,21 @@
 
 
 # https://www.acmicpc.net/problem/4358
-import sys
-tree_dic = dict()
-len_list = 0
+# import sys
+# tree_dic = dict()
+# len_list = 0
 
-while True:
-    tree = sys.stdin.readline().strip()
-    if not tree:
-        break
-    len_list += 1
-    if tree in tree_dic:
-        tree_dic[tree] += 1
-    else:
-        tree_dic[tree] = 1
-sorted_tree = sorted(tree_dic.items())
-for i in sorted_tree:
-    print(i[0], end=" ")
-    print("%.4f" %((i[1]/len_list)*100))
+# while True:
+#     tree = sys.stdin.readline().strip()
+#     if not tree:
+#         break
+#     len_list += 1
+#     if tree in tree_dic:
+#         tree_dic[tree] += 1
+#     else:
+#         tree_dic[tree] = 1
+# sorted_tree = sorted(tree_dic.items())
+# for i in sorted_tree:
+#     print(i[0], end=" ")
+#     print("%.4f" %((i[1]/len_list)*100))
 
