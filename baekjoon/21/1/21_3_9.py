@@ -64,8 +64,11 @@
 
 
 # https://www.acmicpc.net/problem/2407
-from math import factorial
-n, m = map(int, input().split())
-print(factorial(n)//(factorial(n-m) * factorial(m)))
+# from math import factorial
+# n, m = map(int, input().split())
+# print(factorial(n)//(factorial(n-m) * factorial(m)))
+
+
+
 
 
