@@ -16,3 +16,18 @@
 
 
 # https://www.acmicpc.net/problem/9020
+from itertools import combinations
+t = int(input())
+# n이하의 소수 구하여 조합하기
+primes = [0 for i in range(10001)]
+primes[1] = 1
+for i in range(2, 98):
+    for j in range(i * 2, 10001, i):
+        primes[j] = 1
+for _ in range(t):
+    a = int(input())
+    b = a // 2
+    for j in range(b, 1, -1):
+        if primes[a - j] == 0 and primes[j] == 0:
+            print(j, a - j)
+            break
