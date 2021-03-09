@@ -33,12 +33,15 @@
 
 
 # https://www.acmicpc.net/problem/1149
-n = int(input())
-color_cost = []
-for _ in range(n):
-    color_cost.append(list(map(int, input().split())))
-for i in range(1, n):
-    color_cost[i][0] = min(color_cost[i-1][1], color_cost[i-1][2]) + color_cost[i][0]
-    color_cost[i][1] = min(color_cost[i-1][0], color_cost[i-1][2]) + color_cost[i][1]
-    color_cost[i][2] = min(color_cost[i-1][0], color_cost[i-1][1]) + color_cost[i][2]
-print(min(color_cost[-1]))
+# n = int(input())
+# color_cost = []
+# for _ in range(n):
+#     color_cost.append(list(map(int, input().split())))
+# for i in range(1, n):
+#     color_cost[i][0] = min(color_cost[i-1][1], color_cost[i-1][2]) + color_cost[i][0]
+#     color_cost[i][1] = min(color_cost[i-1][0], color_cost[i-1][2]) + color_cost[i][1]
+#     color_cost[i][2] = min(color_cost[i-1][0], color_cost[i-1][1]) + color_cost[i][2]
+# print(min(color_cost[-1]))
+
+
+
