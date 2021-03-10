@@ -74,7 +74,8 @@ if len(eumsoo) %2== 0:
 else:
     for i in range(0, len(eumsoo)-1, 2):
         answer += eumsoo[i] * eumsoo[i+1]
-    answer += eumsoo[-1]
+    if 0 not in etc:
+        answer += eumsoo[-1]
 answer += sum(etc)
 print(answer)
 
