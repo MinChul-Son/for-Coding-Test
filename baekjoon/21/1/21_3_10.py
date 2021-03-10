@@ -43,41 +43,41 @@
 
 
 # https://www.acmicpc.net/problem/1744
-import sys
-n = int(sys.stdin.readline())
-yangsoo = []
-eumsoo = []
-etc = [] #0과 1이 들어감
-answer = 0
-for _ in range(n):
-    input_num = int(sys.stdin.readline())
-    if input_num > 1:
-        yangsoo.append(input_num)
-    elif input_num < 0:
-        eumsoo.append(input_num)
-    else:
-        etc.append(input_num)
-yangsoo.sort(reverse=True)
-eumsoo.sort()
+# import sys
+# n = int(sys.stdin.readline())
+# yangsoo = []
+# eumsoo = []
+# etc = [] #0과 1이 들어감
+# answer = 0
+# for _ in range(n):
+#     input_num = int(sys.stdin.readline())
+#     if input_num > 1:
+#         yangsoo.append(input_num)
+#     elif input_num < 0:
+#         eumsoo.append(input_num)
+#     else:
+#         etc.append(input_num)
+# yangsoo.sort(reverse=True)
+# eumsoo.sort()
 
-if len(yangsoo) %2== 0:
-    for i in range(0, len(yangsoo)-1, 2):
-        answer += yangsoo[i] * yangsoo[i+1]
-else:
-    for i in range(0, len(yangsoo)-1, 2):
-        answer += yangsoo[i] * yangsoo[i+1]
-    answer += yangsoo[-1]
+# if len(yangsoo) %2== 0:
+#     for i in range(0, len(yangsoo)-1, 2):
+#         answer += yangsoo[i] * yangsoo[i+1]
+# else:
+#     for i in range(0, len(yangsoo)-1, 2):
+#         answer += yangsoo[i] * yangsoo[i+1]
+#     answer += yangsoo[-1]
 
-if len(eumsoo) %2== 0:
-    for i in range(0, len(eumsoo)-1, 2):
-        answer += eumsoo[i] * eumsoo[i+1]
-else:
-    for i in range(0, len(eumsoo)-1, 2):
-        answer += eumsoo[i] * eumsoo[i+1]
-    if 0 not in etc:
-        answer += eumsoo[-1]
-answer += sum(etc)
-print(answer)
+# if len(eumsoo) %2== 0:
+#     for i in range(0, len(eumsoo)-1, 2):
+#         answer += eumsoo[i] * eumsoo[i+1]
+# else:
+#     for i in range(0, len(eumsoo)-1, 2):
+#         answer += eumsoo[i] * eumsoo[i+1]
+#     if 0 not in etc:
+#         answer += eumsoo[-1]
+# answer += sum(etc)
+# print(answer)
 
 
 
