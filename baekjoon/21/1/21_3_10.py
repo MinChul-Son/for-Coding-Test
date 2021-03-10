@@ -39,3 +39,10 @@
 #     else:
 #         start = mid + 1
 # print(answer)
+
+
+
+# https://www.acmicpc.net/problem/1339
+
+
+
