@@ -19,31 +19,33 @@
 
 
 # https://www.acmicpc.net/problem/2667
-def dfs(x, y):
-    global count
-    if x <= -1 or x >= n or y <= -1 or y >= n:
-        return False
-    if graph[x][y] == '1':
-        count += 1
-        graph[x][y] = 2       
-        dfs(x -1, y)
-        dfs(x, y -1)
-        dfs(x + 1, y)
-        dfs(x, y + 1)
-        return True
-    return False
+# def dfs(x, y):
+#     global count
+#     if x <= -1 or x >= n or y <= -1 or y >= n:
+#         return False
+#     if graph[x][y] == '1':
+#         count += 1
+#         graph[x][y] = 2       
+#         dfs(x -1, y)
+#         dfs(x, y -1)
+#         dfs(x + 1, y)
+#         dfs(x, y + 1)
+#         return True
+#     return False
 
-n = int(input())
-graph = [list(input()) for _ in range(n)]
-result = 0
-count = 0
-count_list = []
-for i in range(n):
-    for j in range(n):
-        if dfs(i,j) == True:
-            result += 1
-            count_list.append(count)
-            count = 0
-print(result)
-for i in sorted(count_list):
-    print(i)
+# n = int(input())
+# graph = [list(input()) for _ in range(n)]
+# result = 0
+# count = 0
+# count_list = []
+# for i in range(n):
+#     for j in range(n):
+#         if dfs(i,j) == True:
+#             result += 1
+#             count_list.append(count)
+#             count = 0
+# print(result)
+# for i in sorted(count_list):
+#     print(i)
+
+
