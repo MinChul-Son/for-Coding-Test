@@ -67,20 +67,42 @@
 
 
 # https://www.acmicpc.net/problem/2003
+# import sys
+# n, m = map(int, sys.stdin.readline().split())
+# nums = list(map(int, sys.stdin.readline().split()))
+# answer = 0
+# for i in range(n):
+#     temp_sum = 0
+#     for j in range(i, n):
+#         temp_sum += nums[j]
+#         if temp_sum == m:
+#             answer += 1
+#             break
+#         if temp_sum > m:
+#             break
+# print(answer)
+
+# 두 포인터 사용
 import sys
 n, m = map(int, sys.stdin.readline().split())
 nums = list(map(int, sys.stdin.readline().split()))
-answer = 0
-for i in range(n):
-    temp_sum = 0
-    for j in range(i, n):
-        temp_sum += nums[j]
-        if temp_sum == m:
-            answer += 1
-            break
-        if temp_sum > m:
-            break
-print(answer)
+start = 0
+end = 1
+count = 0
+sum = nums[start]
+if sum == m:
+    count += 1
+while not (start == end == n):
+    if sum < m and end < n:
+        sum += nums[end]
+        end += 1
+    else:
+        sum -= nums[start]
+        start += 1
+
+    if sum == m:
+        count += 1
+print(count)
 
 
 
