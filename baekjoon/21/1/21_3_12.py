@@ -83,26 +83,26 @@
 # print(answer)
 
 # 두 포인터 사용
-import sys
-n, m = map(int, sys.stdin.readline().split())
-nums = list(map(int, sys.stdin.readline().split()))
-start = 0
-end = 1
-count = 0
-sum = nums[start]
-if sum == m:
-    count += 1
-while not (start == end == n):
-    if sum < m and end < n:
-        sum += nums[end]
-        end += 1
-    else:
-        sum -= nums[start]
-        start += 1
+# import sys
+# n, m = map(int, sys.stdin.readline().split())
+# nums = list(map(int, sys.stdin.readline().split()))
+# start = 0
+# end = 1
+# count = 0
+# sum = nums[start]
+# if sum == m:
+#     count += 1
+# while not (start == end == n):
+#     if sum < m and end < n:
+#         sum += nums[end]
+#         end += 1
+#     else:
+#         sum -= nums[start]
+#         start += 1
 
-    if sum == m:
-        count += 1
-print(count)
+#     if sum == m:
+#         count += 1
+# print(count)
 
 
 
