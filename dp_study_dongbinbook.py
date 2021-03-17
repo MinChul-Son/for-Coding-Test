@@ -28,3 +28,13 @@ n = 99
 for i in range(3, n + 1):
     d[i] = d[i - 1] + d[i - 2]
 print(d[n])
+
+# 개미 전사 문제
+n = int(input())
+k = list(map(int, input().split()))
+dp = [0 for _ in range(n + 1)]
+dp[1] = k[0]
+dp[2] = max(k[0], k[1])
+for i in range(3, n + 1):
+    dp[i] = max(dp[i-1], k[i-1]+ dp[i-2])
+print(dp[-1])
