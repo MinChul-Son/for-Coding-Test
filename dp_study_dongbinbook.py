@@ -15,3 +15,16 @@ def fibo(x):
     d[x] = fibo(x - 1) + fibo(x - 2)
     return d[x]
 print(fibo(99))
+
+
+# 피보나치 수열 : 바텀업 DP
+# 앞서 계산된 결과를 저장하기 위한 DP 테이블 초기화
+d = [0] * 100
+# f(1) 과 f(2)는 1
+d[1] = 1
+d[2] = 1
+n = 99
+# 피보나치 함수 반복문으로 구현(바텀업)
+for i in range(3, n + 1):
+    d[i] = d[i - 1] + d[i - 2]
+print(d[n])
