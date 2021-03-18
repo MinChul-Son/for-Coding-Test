@@ -139,3 +139,25 @@ for _ in range(t):
     for i in range(n):
         answer = max(answer, dp[i][m-1])
     print(answer)
+
+
+
+# 병사 배치하기(내 풀이)
+n = int(input())
+soldiers = list(map(int, input().split()))
+answer = 0
+for i in range(n-1):
+    if soldiers[i] < soldiers[i+1]:
+        answer += 1
+print(answer)
+
+# 답안 예시 
+n = int(input())
+array = list(map(int, input().split()))
+array.reverse()
+dp = [1] * n
+for i in range(1, n):
+    for j in range(0, i):
+        if array[j] < array[i]:
+            dp[i] = max(dp[i], dp[j] + 1)
+print(n - max(dp))
