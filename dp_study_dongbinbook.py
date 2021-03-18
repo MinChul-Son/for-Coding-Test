@@ -70,3 +70,18 @@ for i in range(2, x+1):
     if i % 5 == 0:
         d[i] = min(d[i], d[i // 5] + 1)
 print(d[x])
+
+
+# 효율적인 화폐 구성 문제
+n, m = map(int, input().split())
+bills = [int(input()) for _ in range(n)]
+dp = [10001 for _ in range(m+1)]
+dp[0] = 0
+for i in bills:
+    for j in range(i, m+1):
+        if dp[j - i] != 10001:
+            dp[j] = min(dp[j], dp[j - i] + 1)
+if dp[m] == 10001:
+    print(-1)
+else:
+    print(dp[m])
