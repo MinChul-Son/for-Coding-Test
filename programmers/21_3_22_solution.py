@@ -1,4 +1,4 @@
-# https://programmers.co.kr/learn/courses/30/lessons/17683#qna
+# https://programmers.co.kr/learn/courses/30/lessons/17683
 
 def solution(m, musicinfos):
     answer = ['',0]
