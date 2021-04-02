@@ -61,3 +61,25 @@
 # print(cnt + 1)
 
 
+
+# https://www.acmicpc.net/problem/1976
+import sys
+input = sys.stdin.readline
+n = int(input())
+m = int(input())
+graph = [list(map(int, input().split())) for _ in range(n)]
+plan = list(map(int, input().split()))
+for k in range(n):
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                graph[i][j] =1
+            if graph[i][k] and graph[k][j]:
+                graph[i][j] = 1
+
+for i in range(m-1):
+    if graph[plan[i]-1][plan[i+1]-1] != 1:
+        print('NO')
+        break
+else:
+    print('YES')
