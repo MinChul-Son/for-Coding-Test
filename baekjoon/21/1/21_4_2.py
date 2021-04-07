@@ -73,7 +73,7 @@ for k in range(n):
     for i in range(n):
         for j in range(n):
             if i == j:
-                graph[i][j] =1
+                graph[i][j] = 1
             if graph[i][k] and graph[k][j]:
                 graph[i][j] = 1
 
