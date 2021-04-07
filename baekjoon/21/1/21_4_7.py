@@ -19,17 +19,32 @@
 
 
 # https://www.acmicpc.net/problem/2812
+# import sys
+# input = sys.stdin.readline
+# n, k = map(int, input().split())
+# num = list(input().strip())
+# stack, temp = [], k
+# for i in range(n):
+#     while temp > 0 and stack and stack[-1] < num[i]:
+#         del stack[-1]
+#         temp -= 1
+#     stack.append(num[i])
+# print(''.join(stack[:n - k]))
+
+
+# https://www.acmicpc.net/problem/2109
 import sys
+import heapq
 input = sys.stdin.readline
-n, k = map(int, input().split())
-num = list(input().strip())
-stack, temp = [], k
-for i in range(n):
-    while temp > 0 and stack and stack[-1] < num[i]:
-        del stack[-1]
-        temp -= 1
-    stack.append(num[i])
-print(''.join(stack[:n - k]))
+n = int(input())
+lectures = sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: (x[1], -x[0]))
+queue = []
+for i in lectures:
+    heapq.heappush(queue, i[0])
+    if len(queue) > i[1]:
+        heapq.heappop(queue)
+print(sum(queue))
+
 
 
 
