@@ -33,17 +33,17 @@
 
 
 # https://www.acmicpc.net/problem/2109
-import sys
-import heapq
-input = sys.stdin.readline
-n = int(input())
-lectures = sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: (x[1], -x[0]))
-queue = []
-for i in lectures:
-    heapq.heappush(queue, i[0])
-    if len(queue) > i[1]:
-        heapq.heappop(queue)
-print(sum(queue))
+# import sys
+# import heapq
+# input = sys.stdin.readline
+# n = int(input())
+# lectures = sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: (x[1], -x[0]))
+# queue = []
+# for i in lectures:
+#     heapq.heappush(queue, i[0])
+#     if len(queue) > i[1]:
+#         heapq.heappop(queue)
+# print(sum(queue))
 
 
 
