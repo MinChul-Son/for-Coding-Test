@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/15711
 import sys
 from math import sqrt
 input=sys.stdin.readline
@@ -42,3 +43,31 @@ for _ in range(t):
             print('YES')
         else: 
             print('NO')
+
+
+#-------------------------------------------------------------------------------------------------
+# https://www.acmicpc.net/problem/15711
+import sys
+from math import sqrt
+
+input = sys.stdin.readline
+
+max_num = 1000000
+prime= [False, False] + [True for _ in range(max_num-1)]
+for i in range(2,int(sqrt(max_num))+1):
+    if prime[i]:
+        for j in range(i+i,max_num,i):
+            prime[j]= False 
+
+
+while True:
+    n = int(input())
+    if n == 0:
+        break
+    for i in range(2, max_num):
+        if prime[i] and prime[n-i]:
+            print(str(n) + " = " + str(i) + " + " + str(n-i))
+            break
+    else:
+        print("Goldbach's conjecture is wrong.")
+
