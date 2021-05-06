@@ -24,3 +24,14 @@ class Solution:
             if prices[i] < prices[i+1]:
                 total_prices += prices[i+1] - prices[i]
         return total_prices
+
+
+
+#---------------------------------------------------------------------------------------------------
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        if len(nums) == len(set(nums)):
+            return False
+        return True
+        
