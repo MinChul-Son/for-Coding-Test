@@ -35,3 +35,26 @@ class Solution:
             return False
         return True
         
+
+
+#-------------------------------------------------------------------------------------------------
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        current_num = nums[0]
+        check_single = 1
+        for i in range(1, len(nums)):
+            if nums[i] != current_num:
+                if check_single == 1:
+                    return current_num
+                check_single = 1
+                current_num = nums[i]
+            else:
+                check_single += 1
+        return current_num
+            
+                
+
+
+
