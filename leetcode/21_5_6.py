@@ -56,8 +56,21 @@ class Solution:
             
 
 #---------------------------------------------------------------------------------------------------
-
-                
-
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/674/
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        answer = []
+        if len(nums1) < len(nums2):
+            for i in nums1:
+                if i in nums2:
+                    answer.append(i)
+                    nums2.remove(i)
+        else:
+            for i in nums2:
+                if i in nums1:
+                    answer.append(i)
+                    nums1.remove(i)
+        return answer
+        
 
 
