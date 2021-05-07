@@ -22,3 +22,15 @@ class Solution:
             for _ in range(count_zero):
                 nums.remove(0)
                 nums.append(0)
+
+
+#---------------------------------------------------------------------------------------------
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/546/
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        answer = []
+        for i,p in enumerate(nums):
+            if (target-p) in nums[i+1:]:
+                answer.append(i)
+                answer.append(i + nums[i+1:].index(target-p) + 1)
+        return answer
