@@ -34,3 +34,19 @@ class Solution:
                 answer.append(i)
                 answer.append(i + nums[i+1:].index(target-p) + 1)
         return answer
+
+
+#-----------------------------------------------------------------------------------------------
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/
+import copy
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        N = len(matrix)
+        ret = copy.deepcopy(matrix)
+
+        for r in range(N):
+            for c in range(N):
+                matrix[c][N-1-r] = ret[r][c]
