@@ -15,3 +15,16 @@ nums = list(map(int, input().split()))
 for num in nums:
     if num < x:
         print(num, end=" ")
+
+#-------------------------------------------------------------------------
+# https://www.acmicpc.net/problem/2562
+import sys
+input = sys.stdin.readline
+max_num = 0; max_idx = 0
+for i in range(1, 10):
+    input_num = int(input())
+    if input_num > max_num:
+        max_num = input_num
+        max_idx = i
+print(max_num)
+print(max_idx)
