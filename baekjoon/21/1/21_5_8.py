@@ -28,3 +28,15 @@ for i in range(1, 10):
         max_idx = i
 print(max_num)
 print(max_idx)
+
+#-----------------------------------------------------------------------------
+# https://www.acmicpc.net/problem/2920
+import sys
+input = sys.stdin.readline
+melody = list(map(int, input().split()))
+if melody == [1, 2, 3, 4, 5, 6, 7, 8]:
+    print("ascending")
+elif melody == [8, 7, 6, 5, 4, 3, 2, 1]:
+    print("descending")
+else:
+    print("mixed")
