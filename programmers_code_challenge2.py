@@ -88,6 +88,5 @@ def solution(numbers):
             if count <= 2:
                 break
         answer.append(compare_num)
-    print(answer)
     return answer
 solution([2,7])
