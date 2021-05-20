@@ -34,11 +34,9 @@ tetrominoes = [
 for i in range(n):
     for j in range(m):
         for tetromino in tetrominoes:
-            # 블록이 종이 안에 들어오는 지 확인하기
             for k in range(4):
                 if not (0 <= (i + tetromino[k][0]) < n and 0 <= (j + tetromino[k][1]) < m):
                     break
-            # 블록이 종이 안에 들어오면 값 계산하기
             else:
                 temp = 0
                 for k in range(4):
