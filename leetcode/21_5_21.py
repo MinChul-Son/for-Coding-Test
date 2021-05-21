@@ -23,3 +23,13 @@ class Solution:
         
         return x
         
+
+#--------------------------------------------------------------------------------------------
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        for i, p in enumerate(s):
+            if s.count(p) == 1:
+                return i
+        else:
+            return -1
