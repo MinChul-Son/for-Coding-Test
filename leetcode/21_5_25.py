@@ -21,4 +21,14 @@ class Solution:
             return False
 
 #--------------------------------------------------------------------------------
-
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/883/
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        alpha_list = []
+        for i in s:
+            if i.isalpha() or i.isdigit():
+                alpha_list.append(i.lower())
+        if alpha_list == list(reversed(alpha_list)):
+            return True
+        else:
+            return False
