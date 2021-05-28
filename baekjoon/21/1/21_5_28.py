@@ -33,6 +33,16 @@ else:
         
 
 #--------------------------------------------------------------------------
-
-
+# https://www.acmicpc.net/problem/14719
+import sys
+input = sys.stdin.readline
+h, w = map(int, input().split())
+height = list(map(int, input().split()))
+raindrop = 0
+for i in range(len(height)):     
+    max_left = max(height[:i+1])
+    max_right = max(height[i:])
+    which_low = min(max_left, max_right)
+    raindrop = raindrop + abs(height[i] - which_low)
+print(raindrop)
 
