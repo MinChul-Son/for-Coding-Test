@@ -1,3 +1,4 @@
+# https://leetcode.com/explore/interview/card/top-interview-questions-easy/96/sorting-and-searching/587/
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
@@ -9,4 +10,3 @@ class Solution:
             nums1 += nums2
             
         nums1.sort()
-        
