@@ -10,5 +10,3 @@ class Solution:
             nums1 += nums2
             
         nums1.sort()
-
-##test 중 
