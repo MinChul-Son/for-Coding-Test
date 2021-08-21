@@ -22,3 +22,5 @@ def solution(lottos, win_nums):
     answer.append(ranking[is_same_count])
 
     return answer
+
+# https://programmers.co.kr/learn/courses/30/lessons/81301?language=python3
