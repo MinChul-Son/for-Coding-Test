@@ -11,4 +11,5 @@ def solution(s):
         s = str(format(len(s), 'b'))
     return [convert_count, remove_count]
 
-solution("110010101001")
+
+
