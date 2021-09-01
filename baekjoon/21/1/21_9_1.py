@@ -1,22 +1,22 @@
 # https://www.acmicpc.net/problem/10799
-# import sys
+import sys
 
-# input = sys.stdin.readline().strip()
-# answer = 0
-# stack = []
-# for i,p in enumerate(input):
-#     if p == '(':
-#         stack.append(p)
-#         continue
+input = sys.stdin.readline().strip()
+answer = 0
+stack = []
+for i,p in enumerate(input):
+    if p == '(':
+        stack.append(p)
+        continue
     
-#     stack.pop()
+    stack.pop()
 
-#     if input[i-1] == '(':
-#         answer += len(stack)
-#     else:
-#         answer += 1
+    if input[i-1] == '(':
+        answer += len(stack)
+    else:
+        answer += 1
 
-# print(answer)
+print(answer)
 
 # https://www.acmicpc.net/problem/2346
 import sys
