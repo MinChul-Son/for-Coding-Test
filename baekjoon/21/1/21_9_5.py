@@ -14,3 +14,21 @@ for _ in range(N):
 answer = sorted(file_dic.items())
 for i in answer:
     print(*i)
+
+# https://www.acmicpc.net/problem/16171
+import sys
+input = sys.stdin.readline
+
+S = input().strip()
+K = input().strip()
+
+remove_numeric = ""
+
+for i in S:
+    if i.isalpha():
+        remove_numeric += i
+
+if K in remove_numeric:
+    print(1)
+else:
+    print(0)
