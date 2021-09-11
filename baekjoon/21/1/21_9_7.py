@@ -14,3 +14,4 @@ for _ in range(N):
             continue
     cow_dic[cow_move[0]] = cow_move[1]
 print(answer)
+
