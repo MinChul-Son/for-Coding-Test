@@ -5,6 +5,9 @@
 from collections import deque
 
 def solution(A, K):
+    if not A:
+        return A
+
     if K % len(A) == 0:
         return A
 
@@ -12,7 +15,5 @@ def solution(A, K):
     rotate_list.rotate(K)
 
     return list(rotate_list)
-    
-    
 
-solution([1,2,3,4], 5)
+solution([], 5)
